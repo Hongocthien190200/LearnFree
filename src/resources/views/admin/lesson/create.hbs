@@ -1,0 +1,23 @@
+<div id="my-courses">
+    <a href="/admin-term/stored/{{course._id}}"><h3>Trở về</h3></a>
+    <h3>Đăng bài học</h3>
+    <form method="POST" action="/admin-lesson/{{term.slug}}/store">
+        <div class="form-group">
+            <label for="name">Tên bài học</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="link">Video bài học</label>
+            <input  type="text" class="form-control" id="link" name="link" required>
+        </div>
+        <div class="form-group">
+            <label for="maKH">Mã khóa học</label>
+            <input  type="text" class="form-control" id="maKH" name="maKH" value="{{course._id}}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="maTerm">Mã Phần học</label>
+            <input  type="text" class="form-control" id="maTerm" name="maTerm" value="{{term._id}}" readonly>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

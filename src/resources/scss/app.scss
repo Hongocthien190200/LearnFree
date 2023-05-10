@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* xóa mặc định của trang */
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#header .header-logo img {
+    width: 46px;
+    height: 46px;
+    margin: 0px 8px;
+}
+
+#header .navbar {
+    padding-left: 126px;
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#seacrh-header {
+    background: #fff;
+    width: 420px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 2px 20px 2px 532px;
+    
+}
+
+#seacrh-header .ti-search {
+    display: inline;
+    margin-left: 8px;
+    padding: 8px;
+    font-weight: 800;
+}
+
+#seacrh-header>input {
+    background: #fff;
+    border: none;
+    display: inline;
+    width: 85%;
+    height: 80%;
+    padding:0px 8px;
+    margin: 4px 0px;
+}
+.block-search-u{
+    display: none;
+}
+.block-search-a{
+    display: block;
+}
+.hide{
+    display: none;
+}
+#list-item{
+    background: #ccc;
+    width: 450px;
+    max-height: 300px;
+    position: absolute;
+    top: 100%;
+    right: 256px ;
+    overflow-y: scroll;
+}
+.user-avatar{
+    width: 28px;
+    height: 28px;
+    border-radius: 15%;
+}
+.style-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+.style-1::-webkit-scrollbar-thumb {
+    background-color: #575555;
+}
+.style-1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+#list-item .coures-item{
+    width: 96%;
+    height: 50px;
+    margin: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#list-item .coures-item>img{
+    width: 20%;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+#list-item .coures-item>p{
+    width: 75%;
+    margin: 0px 16px;
+}
+
+#content {
+    margin-top: 60px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    padding: 15px;
+}
+
+.slider {
+    max-width: 1250px;
+    margin: 25px auto;
+    position: relative;
+}
+
+.carousel-inner img {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.carousel-control-prev-icon {
+    background-image: #ccc;
+    font-weight: bold;
+}
+
+/* card main */
+
+.content-body {
+    max-width: 1250px;
+    margin: 48px auto;
+}
+
+.content-body h1 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 10px 0px;
+}
+
+.content-courses .card-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 32px -16px;
+
+}
+
+.card-main .card-sz>a {
+    text-decoration: none;
+    opacity: 1;
+    color: #000;
+}
+
+.card-main .card-sz>a:hover {
+    opacity: 0.8;
+}
+
+.card-main .card-sz {
+    width: 25%;
+    margin-bottom: 24px;
+}
+
+.card-main .card-sz .card-index {
+    width: 100%;
+    padding: 0px 16px;
+
+}
+
+.card-index>img {
+    height: 180px;
+    border: 0.5px solid#ccc;
+    border-radius: 25px;
+    margin-bottom: 8px;
+}
+
+.card-index .card__body {
+    margin: 0px 16px;
+}
+
+.card-index .title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+
+/* endcard main */
+
+#footer {
+    background: #343a40;
+    color: #ccc;
+}
+
+.row {
+    padding: 0px 128px;
+}

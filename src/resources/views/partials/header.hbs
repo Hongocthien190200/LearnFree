@@ -1,0 +1,94 @@
+<div id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="header-logo" href="/"><img src="/img/logo/logoheader.png" alt=""></a>
+        <a class="navbar-brand" href="/">Trang chủ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <div id="seacrh-header">
+                    <i class="ti-search"></i>
+                    <input type="text" placeholder="Tìm kiếm khóa học">
+                </div>
+                <div class="block-search-u">
+                    <div id="list-item" class="style-1">
+                        {{#each courses}}
+                        <a class="course" href="/course/{{this.slug}}">
+                            <div class="coures-item">
+                                <img src="{{this.img}}" alt="">
+                                <p>{{this.name}}</p>
+                            </div>
+                        </a>
+                        {{/each}}
+
+                    </div>
+                </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="user-avatar"
+                            src="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png" alt="">
+                        {{#if user}}
+                        {{user.username}}
+                        {{else}}
+                        Tài khoản
+                        {{/if}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {{#if us}}
+                        <a class="dropdown-item" href="/admin-course/stored">Khóa học của tôi</a>
+                        <a class="dropdown-item" href="/logout">Đăng xuất</a>
+                        {{else}}
+                        {{#if user}}
+                        <a class="dropdown-item" href="/logout">Đăng xuất</a>
+                        {{else}}
+                        <a class="dropdown-item" href="/login">Đăng nhập</a>
+                        <a class="dropdown-item" href="/register">Đăng ký</a>
+                        {{/if}}
+                        {{/if}}
+                        {{!-- <a class="dropdown-item" href="/courses/create">Đăng khóa học</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/me/stored/courses">Khóa học của tôi</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/logout">Đăng xuất</a> --}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<script>
+    var searchBlock = document.querySelector('.block-search-u')
+    var searchInp = document.querySelector('#seacrh-header input');
+    var courseEles = document.querySelectorAll('.course');
+
+
+    function showSearchBlo() {
+        searchBlock.classList.add('block-search-a');
+    }
+    function hidenSearchBlo() {
+        searchBlock.classList.remove('block-search-a');
+    }
+
+    searchInp.addEventListener('input', function (e) {
+        showSearchBlo();
+
+        const txtSearch = e.target.value.trim().toLowerCase();
+
+        courseEles.forEach(item => {
+            if (item.innerText.toLowerCase().includes(txtSearch)) {
+                item.classList.remove('hide')
+            }
+            else {
+                item.classList.add('hide');
+            }
+        })
+
+        if (e.target.value == '') {
+            hidenSearchBlo();
+        }
+    })
+</script>

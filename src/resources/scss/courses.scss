@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.text-size-m{
+    font-size: 18px;
+}
+.fw600{
+    font-weight: 600;
+}
+.text-size-s{
+    font-size: 16px;
+}
+.color-org{
+    color: #f05123;
+}
+.mt50{
+    margin-top: 50px;
+}
+.mt32{
+    margin-top: 32px;
+}
+.mt16{
+    margin-top: 16px;
+}
+.mb64{
+    margin-bottom: 64px;
+}
+.ml-126{
+    margin-left: 126px;
+}
+.ml-24{
+    margin-left: 24px;
+}
+.pd-16-32{
+    padding: 16px 32px ;
+}
+.pd-16-48{
+    padding: 16px 48px ;
+}
+/* xóa mặc định của trang */
+html{
+    scroll-behavior: smooth;
+    font-family: Helvetica,Arial, sans-serif;
+    overflow-y: hidden;
+}
+#header{
+    height: 50px;
+    width: 100%;
+    background: #343a40;
+    color: #fff;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav-left {
+    display: flex;
+    padding-left: 16px;
+    padding-top: 2px;
+}
+.nav-left .i-back{
+    text-decoration: none;
+    margin: 8px;
+    width: 28px;
+    height: 28px;
+}
+.ti-back-home{
+    font-size: 28px;
+    color: #d8d9db;
+}
+.nav-left .logo img{
+    margin-left: 20px;
+    width: 46px;
+    height: 46px;
+}
+.nav-left h4{
+    text-align: center;
+    margin: 7px 16px;
+}
+/* begin content */
+#content{
+    height: 100%;
+width: 100%;
+display: flex;
+}
+.content-left{
+    width: 75%;
+    overflow-y: scroll;
+    height: 664px;
+}
+.force-overflow {
+    min-height: 450px;
+}
+#style-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+#style-1::-webkit-scrollbar-thumb {
+    background-color: #575555;
+}
+#style-1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+.content-left .video{
+    height: 580px;
+    background: #000000;
+}
+.content-left .video iframe{
+    width: 80%;
+    height: 100%;
+    margin: 0px 10%;
+    padding: 0px;
+}
+
+.content-right{
+    width: 25%;
+    background: #fff;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 664px;
+}
+
+
+.header-content{
+    width: 24.625%;
+    height: 53px;
+    background: #fff;
+    position:fixed;
+    
+}
+
+/* List courses */
+.head{
+    margin-bottom: 53px;
+}
+
+.content-right .list-courses{
+    background: #efeff0;
+    cursor: pointer;
+}
+.content-right .frame-i{
+    border-bottom: 1px solid#ccc;
+    display: flex;
+    justify-content: space-between;
+}
+.frame-i>i{
+    align-self: center;
+    margin-right: 8px;
+}
+.content-right .frame-i:hover{
+    background:#d8d9db ;
+}
+.content-right .second-main{
+    background: #fff;
+    display: none;
+}
+.display-b{
+    display: block !important;
+}
+.second-main .courses{
+    border-bottom: 1px solid#ccc;
+    background: #fdfdfd;
+}
+.second-main .courses:hover{
+    background:#f1e1e1!important;
+}
+.isactive{
+    background:#f1e1e1!important;
+    opacity: 1!important;
+}
+    

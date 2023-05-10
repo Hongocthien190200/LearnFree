@@ -1,0 +1,46 @@
+.text-h1-s {
+  font-size: 20px !important; }
+
+.text-s {
+  width: 50%;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 15px; }
+
+.text-m {
+  width: 70%;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 15px; }
+
+.Header-FEnBE {
+  margin-bottom: 48px; }
+
+.content-FEnBE {
+  width: 70%;
+  margin-bottom: 48px; }
+
+.content-FEnBE-box {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 25px;
+  align-items: center;
+  margin: 16px 0px; }
+
+.content-FEnBE-box img {
+  width: 30%;
+  border-radius: 15px; }
+
+.content-FEnBE-box .FEnBE-text {
+  width: 65%; }
+
+.content-FEnBE-box img,
+.content-FEnBE-box .FEnBE-text {
+  margin: 0px 16px; }
+
+.colotext-orange {
+  font-weight: bold;
+  color: #f05123;
+  font-size: 18px; }

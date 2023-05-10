@@ -1,0 +1,89 @@
+
+<div id="content" class="mt50">
+    <div class="content-left" id="style-1">
+        <div class="video">
+            <iframe id="video-lesson" src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="text-content ml-126">
+            <h1 class="mt32">Tri thức ở đâu chúng tôi vươn ở đó!</h1>
+            <p class="mt32 text-size-m">Tham gia các cộng đồng để cùng học hỏi, chia sẻ và "thám thính" xem F8 sắp có gì
+                mới nhé!</p>
+            <ul class="mt32 ml-24 text-size-m mb64">
+                <li>Fanpage: <a class="color-org"
+                        href="https://www.facebook.com/f8vnofficial">https://www.facebook.com/f8vnofficial</a></li>
+                <li>Group: <a class="color-org"
+                        href="https://www.facebook.com/groups/649972919142215">https://www.facebook.com/groups/649972919142215</a>
+                </li>
+                <li>Youtube: <a class="color-org"
+                        href="https://www.youtube.com/F8VNOfficial">https://www.youtube.com/F8VNOfficial</a></li>
+                <li>Sơn Đặng: <a class="color-org"
+                        href="https://www.facebook.com/sondnf8">https://www.facebook.com/sondnf8</a></li>
+            </ul>
+        </div>
+        <div class="force-overflow"></div>
+    </div>
+
+    <div class="content-right" id="style-1">
+        <div class="head">
+            <div class="header-content pd-16-32">
+                <h3>Nội dung khóa học</h3>
+            </div>
+        </div>
+        {{#each lisTerm2 as |lisTerm2|}}
+        <div class="list-courses">
+            <div class="frame-i">
+                <div class="course-main pd-16-32 text-size-m fw600">{{sum @index 1}}. {{lisTerm2.name}} </div>
+                <i class="ti-angle-down"></i>
+            </div>
+            <div class="second-main">
+                    {{#each lisTerm2.listLesson as |lesto|}}
+                        <div id="Lesson-core" class="courses text-size-s pd-16-48" data-id="{{lesto.link}}">{{sum @index 1}}. {{lesto.name}}</div>
+                        {{else}}
+                            <div class="courses text-size-s pd-16-48">Chưa có bài học nào trong phần này</div>
+                    {{/each}}
+            </div>
+        </div>
+        {{/each}}
+        <div class="force-overflow"></div> 
+    </div>
+</div>
+
+<script>
+    const currentIndex = 0;
+    const ListLessonELe = document.querySelectorAll('#Lesson-core');
+    const iFrameEle = document.querySelector('#video-lesson');
+    const CourseMainELe = document.querySelectorAll('.frame-i');
+    const CourseSeELe = document.querySelectorAll('.second-main');
+    if(currentIndex==0){
+        iFrameEle.src=ListLessonELe[0].dataset.id;
+        ListLessonELe[0].classList.add('isactive')
+        CourseSeELe[0].classList.add('display-b')
+    }
+    
+    CourseMainELe.forEach(function (item, index1) {
+        item.addEventListener('click', function () {
+            CourseSeELe.forEach(function (cou, index) {
+                if (index == index1) {
+                    cou.classList.toggle('display-b')
+                }
+            })
+        })
+    })
+
+    {{!-- BEGIN click Lesson --}}
+    
+
+    ListLessonELe.forEach(function(lesson){
+        lesson.addEventListener('click', function(){
+            const noneEle= document.querySelector('.isactive')
+            noneEle.classList.remove('isactive')
+            iFrameEle.src=lesson.dataset.id;
+            lesson.classList.add('isactive')
+            
+        })
+    })
+</script>
+
+</html>

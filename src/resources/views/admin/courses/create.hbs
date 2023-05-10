@@ -1,0 +1,19 @@
+<div id="my-courses">
+    <a href="/admin-course/stored"><h3>Trở về</h3></a>
+    <h3>Đăng khóa học</h3>
+    <form method="POST" action="/admin-course/store">
+        <div class="form-group">
+            <label for="name">Tên khóa học</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Mô tả</label>
+            <textarea type="text" class="form-control"  name="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="img">Hình ảnh</label>
+            <input type="text" class="form-control" id="img" name="img" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

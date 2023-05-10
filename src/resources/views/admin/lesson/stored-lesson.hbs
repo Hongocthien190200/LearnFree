@@ -1,0 +1,84 @@
+<div id="my-courses">
+    <div>
+        <a href="/admin-term/stored/{{term.maKH}}"><h4>Trở về</h4></a>
+        <h3>Danh sách các bài học tại: {{term.name}}</h3>
+        <a href="/admin-lesson/strash/{{term._id}}">Thùng rác({{countLessoneleted}})</a>
+        <a href="/admin-lesson/{{term.slug}}/create"><h4>Thêm bài học</h4></a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Tên bài học</th>
+                <th scope="col">Thời gian tạo</th>
+                <th scope="col">Lần sửa cuối cùng</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each lessons}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td>{{this.name}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>{{this.updatedAt}}</td>
+                <td>
+                    <a href="/admin-lesson/{{this._id}}/edit" class="btn btn-link">Sửa</a>
+                </td>
+                <td><a href="" class="btn btn-link" data-toggle="modal" data-target="#delete-course"
+                        data-id="{{this._id}}">Xóa</a>
+                </td>
+            </tr>
+            {{else}}
+            <tr>
+                <td colspan="5" class="text-center">Bạn chưa đăng bài học nào.
+                    <a href="/admin-lesson/{{term.slug}}/create"><h4>Thêm bài học</h4></a>
+                </td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal delete -->
+<div class="modal fade" id="delete-course" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa bài học</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn chắc chắc muốn xóa bỏ bài học này?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <button id="btn-delete-course" type="button" class="btn btn-danger">Xóa bỏ</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Form delete -->
+<form name="delete-form" method="POST"></form>
+<!-- js delete -->
+<script>
+    var lessonId;
+    var btnDeleteCourse = document.getElementById('btn-delete-course');
+    var DeleteForm = document.forms['delete-form'];
+    document.addEventListener('DOMContentLoaded', function () {
+        $('#delete-course').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            lessonId = button.data('id');
+        });
+        btnDeleteCourse.onclick = function () {
+            DeleteForm.action = '/admin-lesson/' + lessonId + '?_method=DELETE';
+            DeleteForm.submit();
+        }
+    });
+
+</script>

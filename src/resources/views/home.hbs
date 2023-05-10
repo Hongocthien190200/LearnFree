@@ -1,0 +1,156 @@
+<div id="content">
+    <div class="slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="/course/kien-thuc-nhap-mon-it"><img class="d-block w-100" src="/img/slider/sliderx1.bmp" alt="First slide"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/roadmap"><img class="d-block w-100" src="/img/slider/sliderx2.bmp" alt="Second slide"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.facebook.com/groups/f8official"><img class="d-block w-100" src="/img/slider/sliderx3.bmp" alt="Third slide"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.facebook.com/profile.php?id=100031730930619"><img class="d-block w-100" src="/img/slider/sliderx4.bmp" alt="Fourth slide"></a>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- BEGin Contentbody -->
+    <div class="content-body">
+        <!-- BEGIN Card -->
+        <div class="content-courses">
+            <h1>Khóa học miễn phí</h1>
+            <div class="card-main">
+                {{#each courses}}
+                <div class="card-sz">
+                    <a href="/course/{{this.slug}}">
+                        <div class="card-index">
+                            <img class="card-img" src="{{this.img}}" alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">{{this.name}}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+        <!-- END Card -->
+        <div class="content-blog">
+            <div class="content-courses">
+                <h1>Trick & Tip hay dành cho Coder</h1>
+                <div class="card-main">
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/65/6139fe28a9844.png"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/279/6153f692d366e.jpg"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/51/6139c6453456e.png"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/677/615436b218d0a.png"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/107/613a1f3685814.png"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/1671/61b6368983c16.jpg"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/273/614043e523ad9.png"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-sz">
+                        <div class="card-index">
+                            <img class="card-img"
+                                src="https://files.fullstack.edu.vn/f8-prod/blog_posts/791/615de64de7e8f.jpg"
+                                alt="Card image cap">
+                            <div class="card__body">
+                                <h5 class="title">Blog text</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Contentbody -->
+</div>
